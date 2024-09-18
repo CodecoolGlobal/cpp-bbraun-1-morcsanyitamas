@@ -9,12 +9,39 @@ int getRandomNumber()
 {
     srand(static_cast<unsigned int>(time(0)));
     int randomNumber = rand() % 10 + 1;
+    cout << "Generated random number: " << randomNumber << endl;
     return randomNumber;
 }
 
 void printDayOfWeek()
 {
     // TODO: Implement the switch statement
+    switch (int day = getRandomNumber())
+    {
+    case 1:
+        cout << "Monday" << endl;
+        break;
+    case 2:
+        cout << "Tuesday" << endl;
+        break;
+    case 3:
+        cout << "Wednesday" << endl;
+        break;
+    case 4:
+        cout << "Thursday" << endl;
+        break;
+    case 5:
+        cout << "Friday" << endl;
+        break;
+    case 6:
+        cout << "Saturday" << endl;
+        break;
+    case 7:
+        cout << "Sunday" << endl;
+        break;
+    default:
+        cout << "Invalid day" << endl;
+    }
 }
 
 void selectMenu()
@@ -27,12 +54,28 @@ void selectMenu()
     cin >> choice;
 
     // TODO: Implement the switch statement, using fallthrough effect
+    switch (choice)
+    {
+    case 3:
+        cout << "Dinner selected." << endl;
+        [[fallthrough]];
+    case 2:
+        cout << "Lunch selected." << endl;
+        [[fallthrough]];
+    case 1:
+        cout << "Breakfast selected." << endl;
+        break;
+    default:
+        cout << "Invalid choice" << endl;
+        break;
+    }
 }
 
 int main()
 {
+
     selectMenu();
     printDayOfWeek();
-    
+
     return 0;
 }

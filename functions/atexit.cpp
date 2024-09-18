@@ -18,6 +18,7 @@ void cleanup()
 int main()
 {
     // TODO: Register the cleanup function using atexit
+    atexit(cleanup);
     
     numbers = new int[10];
     cout << "Memory allocated successfully." << endl;

@@ -3,6 +3,10 @@
 using namespace std;
 
 // TODO: implement a function that returns the maximum of two integers
+auto max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
 
 int main()
 {

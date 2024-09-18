@@ -11,8 +11,22 @@ struct Point
 };
 
 // TODO: implement a function that calculates a new point (x + 1, y + 1) based on the input
+Point calculatePoint(int x, int y)
+{
+    Point p;
+    p.x = x + 1;
+    p.y = y + 1;
+    return p;
+}
 
 // TODO: implement a function that calculates the distance between two points
+tuple<Point, Point, double> calculatePointAndDistance(int x1, int y1, int x2, int y2)
+{
+    Point p1{x1, y1};
+    Point p2{x2, y2};
+    double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    return make_tuple(p1, p2, distance);
+}
 
 int main()
 {

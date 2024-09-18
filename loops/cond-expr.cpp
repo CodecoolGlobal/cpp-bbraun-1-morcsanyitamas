@@ -19,6 +19,7 @@ public:
 
 int main() {
     // TODO: Use the Condition class to toggle the condition in the while loop
+    Condition cond(true);
 
     while (cond) {
         cout << "Condition is true..." << endl;

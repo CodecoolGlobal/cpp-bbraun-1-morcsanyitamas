@@ -45,6 +45,7 @@ public:
 char toChar(int asciiValue)
 {
     // TODO: convert asciiValue to char
+    return static_cast<char>(asciiValue);
 }
 
 void animalTalk()
@@ -54,13 +55,13 @@ void animalTalk()
     for (Animal *animal : animals)
     {
         // TODO: construct the condition to check the animal is a Dog
-        if ()
+        if (Dog * dog = dynamic_cast<Dog *>(animal))
         {
             cout << "Speaking dog is: " << dog->getAge() << " years old.";
             dog->speak();
         }
         // TODO: construct the condition to check the animal is a Cat
-        else if ()
+        else if (Cat *cat = dynamic_cast<Cat *>(animal))
         {
             cout << "Speaking cat is: " << cat->getColor() << " color.";
             cat->speak();

@@ -18,6 +18,7 @@ int main()
     signedInt.value = -1;
 
     // TODO: reinterpret_cast signedInt to UnsignedInt
+    UnsignedInt *unsignedInt = reinterpret_cast<UnsignedInt *>(&signedInt);
     
     cout << "Casted value: " << unsignedInt->value << endl;
 

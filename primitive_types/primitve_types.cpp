@@ -21,16 +21,16 @@ int main()
     */
 
     // TODO: Initialize primitive types
-    bool isStudent;
-    char grade;
-    wchar_t sum;
-    char16_t heart;
-    char32_t smile;
-    short year;
-    int population;
-    long long distanceToSun;
-    float price;
-    double massOfEarth;
+    bool isStudent = true;
+    char grade = 'A';
+    wchar_t sum = L'Ʃ';
+    char16_t heart = u'\u2665';
+    char32_t smile = U'\U0001F60A';
+    short year = 2023;
+    int population = 1000000;
+    long long distanceToSun = 149600000;
+    float price = 9.99f;
+    double massOfEarth = 5.972e24;
 
     wstring_convert<codecvt_utf8_utf16<char16_t>, char16_t> convert16;
     wstring_convert<codecvt_utf8<char32_t>, char32_t> convert32;
@@ -40,8 +40,8 @@ int main()
 
     cout << "Is student? " << isStudent << endl;
     cout << "Grade: " << grade << endl;
-    cout << "Heart: " << heart << endl;
-    cout << "Emoji: " << utf8_emoji << endl;
+    cout << "Heart: " << hex << heart << endl;
+    cout << "Emoji: " << dec << utf8_emoji << endl;
     cout << "Emoji2: " << utf8_emoji2 << endl;
     cout << "Year: " << year << endl;
     cout << "Population: " << population << endl;

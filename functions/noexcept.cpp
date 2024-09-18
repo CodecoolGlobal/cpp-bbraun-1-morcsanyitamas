@@ -4,6 +4,15 @@
 using namespace std;
 
 // TODO: implement a function that calculates the sum of the elements in a vector
+int sumElements(const vector<int> &numbers) noexcept
+{
+    int sum = 0;
+    for (int num : numbers)
+    {
+        sum += num;
+    }
+    return sum;
+}
 
 int main()
 {
